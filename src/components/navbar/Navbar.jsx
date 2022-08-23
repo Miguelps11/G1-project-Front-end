@@ -1,20 +1,22 @@
-import React from 'react'
-import './navbar.scss'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.scss";
 
 export const Navbar = () => {
   return (
     <nav>
-        <div className="navContainer">
-            <div className="logoContainer">
-                <h1>logo</h1>
-            </div>
-            <div className="navList">
-            <h1>lsta</h1>
-            </div>
+      <div className="navContainer">
+        <div className="logoContainer">
+          <img src="./assets/logo.png" alt="logo"/>
         </div>
-        <div className="navBtn">
-        <h1>Btn</h1>
-        </div>
+       
+          <ul className="navList">
+            <NavLink to="/portfolio"><li>Portfolio</li></NavLink>
+            <NavLink to="/products"><li>Productos</li></NavLink>
+            <NavLink to="/contact"><li>Contacto</li></NavLink>
+          </ul>
+    
+      </div>
     </nav>
-  )
-}
+  );
+};
